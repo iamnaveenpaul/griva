@@ -1,0 +1,105 @@
+<div class="container-fluid">
+
+  <div class="wrappper">
+    <div class="row course">
+      <sidebar></sidebar>
+      <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 right-section">
+        <div class="bio-info">
+          <div class="row">
+            <div class="col-md-5">
+              <label>Bio</label>
+              <textarea [(ngModel)]="bio"></textarea>
+
+              <label>Education</label>
+              <input [(ngModel)]="education">
+            </div>
+            <div class="col-md-5">
+              <label>Address</label>
+              <textarea [(ngModel)]="address_bio"></textarea>
+
+              <label>Languages Spoken</label>
+              <input [(ngModel)]="languages">
+            </div>
+          </div>
+          <div class="text-center" style="margin-top:1rem;">
+            <button class="btn btn-primary" (click)="saveBio()">Save</button>
+          </div>
+        </div>
+
+        <div class="clearfix">
+          <div class="float-left">
+            <label>Courses conducted</label>
+          </div>
+          <div class="float-right">
+            <button class="btn btn-default btn-sm" data-toggle="modal" (click)="clearForm()" data-target="#myModal">Add course</button>
+          </div>
+        </div>
+        <div class="list">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Address</th>
+              <th>City</th>
+              <th>Experience</th>
+              <th>Certification</th>
+              <th>Age groups</th>
+              <th>Rating</th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let el of courses">
+              <td>{{el.title}}</td>
+              <td>{{el.address}}</td>
+              <td>{{el.city}}</td>
+              <td>{{el.experience}}</td>
+              <td>{{el.certification}}</td>
+              <td>{{el.ageGroups}}</td>
+              <td>{{el.rating}}</td>
+              <td class="cursor" (click)="editCourse(el)">Edit</td>
+            </tr>
+          </table>
+
+          <div class="modal" id="myModal" #modal>
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                <div class="modal-header">
+                  <p class="modal-title">Filling all the fields helps students make an informative decision.</p>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <div class="modal-body">
+                  <label>Title of the course</label>
+                  <input [(ngModel)]="title">
+
+                  <label>Address of the class</label>
+                  <input [(ngModel)]="address">
+
+                  <label>City of the class</label>
+                  <input [(ngModel)]="city">
+
+                  <label>Your teaching experience in years</label>
+                  <input [(ngModel)]="experience">
+
+                  <label>This is a certification course</label>
+                  <input [(ngModel)]="certification">
+
+                  <label>Age groups for which this class is conducted</label>
+                  <input [(ngModel)]="ageGroups">
+
+                  <label>A brief intro to what the students can expect</label>
+                  <textarea [(ngModel)]="brief"></textarea>
+                </div>
+
+                <div class="modal-footer">
+                  <button class="btn btn-primary btn-sm" (click)="saveCourse()">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,17 @@
+@import "../../../assets/sass/theme.scss";
+
+.profile td {
+  border-top: 0;
+  padding: 5px;
+}
+
+table {
+  background: transparent;
+}
+
+.profile td input {
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 100%;
+}

@@ -1,0 +1,16 @@
+@import "../../../assets/sass/theme.scss";
+
+form {
+  max-width: 330px;
+  margin: 0 auto;
+}
+
+.bg-teal-abstract {
+  position: absolute;
+  background: $teal;
+  height: 150px;
+  width: 100%;
+  z-index: -1;
+  bottom: 0;
+  transform: rotate(-5deg) skew(-5deg);
+}

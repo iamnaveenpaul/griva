@@ -1,0 +1,33 @@
+@import "../../../assets/sass/theme.scss";
+
+.right-section {
+  background: $grey-bg;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bbb;
+  font-weight: 100;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #bbb;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 991.99px) {
+  .col-md-4 {
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+}

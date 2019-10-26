@@ -1,0 +1,257 @@
+@import "../../../assets/sass/theme.scss";
+@import url('https://cdn.quilljs.com/1.3.6/quill.bubble.css');
+//@import url('https://cdn.quilljs.com/1.3.6/quill.snow.css');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700&display=swap');
+
+*{
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.left-menu {
+  background: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0;
+  box-shadow:inset -1px 0 0 $grey-bg;
+  font-weight: 100;
+}
+
+.left-menu i {
+  color: $primary-color;
+}
+
+.left-menu .icon {
+  display: inline-block;
+  width: 25px;
+}
+
+.left-menu .link {
+  display: inline-block;
+}
+
+.left-menu li {
+  padding: 0.75rem 3rem;
+}
+
+.left-menu .active,
+.left-menu li:hover {
+  background: $grey-bg;
+  cursor: pointer;
+}
+
+.left-menu .link a:hover {
+  text-decoration: none;
+}
+
+.left-menu .link a {
+  color: #777;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 2rem;
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bbb;
+  font-weight: 100;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #bbb;
+  font-weight: 100;
+}
+
+.editor-wrapper {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 9999;
+  padding: 1% 0;
+  margin-top: 0 !important;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  overflow-y: scroll;
+}
+
+.editor-wrapper::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+.toolbox-css {
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+  z-index: 99999;
+  top: 0;
+  padding: 1%;
+  border-bottom: 1px solid #eee
+}
+
+.toolbox-css .float-left select,
+.toolbox-css .float-left input {
+  padding: 2px 15px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  text-tranform: capitalize;
+}
+
+.toolbox-css .float-left {
+  margin-right: 15px;
+}
+
+#editor {
+  min-height: 350px;
+  border: 1px solid #fff !important;
+  font-size: 1.1rem;
+}
+
+.posts {
+  position: relative;
+  margin-top: 15px;
+}
+
+.posts .abs-right {
+  margin-bottom: 1rem;
+  margin-top: 1.75rem;
+}
+
+.posts .abs-right textarea {
+  border: none;
+  line-height: 40px;
+}
+
+.posts .abs-right .title {
+  font-size: 2.5rem;
+  font-family: 'PT Serif', serif;
+  color: inherit;
+}
+
+.posts .abs-right .subtitle {
+  font-size: 1.65rem;
+}
+
+.posts .abs-right-tags .float-left {
+  margin-left: 5px;
+}
+
+.posts .abs-right-tags .form-control {
+  padding: 3px .75rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+  height: 30px;
+}
+
+.post-nav {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.post-nav li {
+  display: inline-block;
+  cursor: pointer;
+  width: 150px;
+  background: #fff;
+  text-align: center;
+  border-radius: 2px;
+  padding: 2px 0;
+  color: $primary-color;
+  border-bottom: 2px solid transparent;
+}
+
+.post-nav .active,
+.post-nav li:hover {
+  background: $hover-red;
+  border-bottom: 2px solid $primary-color;
+  transition: all 0.5s;
+}
+
+.posts table td {
+  font-weight: 300;
+}
+
+.posts table td,
+.posts table th {
+  border: 1px solid #eee;
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.posts table th {
+  background: $hover-red;
+}
+
+.posts table {
+  width: 100%;
+  background: #fff;
+}
+
+.posts .abs-right-tags {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+}
+
+.posts .abs-right-tags .tag {
+  padding: 3px .75rem;
+  font-size: 0.9rem;
+  border-radius: 2px;
+}
+
+.btn-sm {
+  padding: 2px 15px;
+}
+
+.white-bg {
+  background: #fff;
+  border-radius: 2px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bbb;
+  font-weight: 100;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #bbb;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 991.99px) {
+  .col-md-4 {
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+}

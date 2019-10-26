@@ -1,0 +1,72 @@
+<div class="bg-teal-abstract">
+
+</div>
+
+<div class="container">
+  <h2 class="page-header text-center">Register</h2>
+
+  <form [formGroup]="registerForm"
+    (ngSubmit)="onRegisterSubmit()"
+    >
+
+  <div class="form-group">
+
+    <input type="emailId" name="userEmailId" class="form-control"
+      id="userEmailId"
+      placeholder="Enter your Email ID"
+      formControlName="userEmailId"
+      autofocus="true"
+      email="true"
+    >
+  </div>
+  <div class="form-group">
+
+    <input type="text" name="userPhone" class="form-control"
+      id="userPhone"
+      placeholder="Enter your India Phone number"
+      formControlName="userPhone"
+      autofocus="true"
+      >
+  </div>
+  <div class="form-group">
+
+    <input type="text" name="username" class="form-control"
+      id="username"
+      placeholder="Enter your full name"
+      formControlName="username"
+      autofocus="true"
+      >
+  </div>
+
+  <div class="form-group">
+
+    <input type="password" name="password" class="form-control"
+      id="password"
+      placeholder="Enter your password"
+      formControlName="password"
+      >
+  </div>
+
+  <div class="form-group">
+
+      <input type="password" name="confirmPass" class="form-control"
+      id="confirmPass"
+      placeholder="Confirm password"
+      formControlName="confirmPass"
+      >
+  </div>
+
+  <div class="form-group">
+    <button [disabled]="registerForm.invalid"
+      type="submit"
+      class="btn btn-primary btn-block"
+      name="register"
+      >Register
+    </button>
+  </div>
+
+  <a [routerLink]="['/login']">Already have an account?</a>
+
+  </form>
+
+</div>

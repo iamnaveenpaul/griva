@@ -1,0 +1,54 @@
+@import "../../../assets/sass/theme.scss";
+
+.left-menu {
+  background: #fff;
+  position: fixed;
+  top: 3.5rem;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0;
+  box-shadow:inset -1px 0 0 $grey-bg;
+  font-weight: 100;
+}
+
+.left-menu i {
+  color: $primary-color;
+}
+
+.left-menu .icon {
+  display: inline-block;
+  width: 25px;
+}
+
+.left-menu .link {
+  display: inline-block;
+}
+
+.left-menu li {
+  padding: 0.75rem 3rem;
+}
+
+.left-menu .active,
+.left-menu li:hover {
+  background: $grey-bg;
+  cursor: pointer;
+}
+
+.left-menu .link a:hover {
+  text-decoration: none;
+}
+
+.left-menu .link a {
+  color: #777;
+  font-size: 0.9rem;
+  letter-spacing: 0.03rem;
+}
+
+.sidebar-sticky {
+  position: sticky;
+  top: 2rem;
+  height: calc(100vh - 48px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}

@@ -1,0 +1,85 @@
+<div class="container-fluid">
+
+  <div class="wrappper">
+    <div class="row">
+      <sidebar></sidebar>
+      <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 right-section">
+
+        <div class="alerts" *ngIf="showAlert">
+          {{alertMessage}}
+        </div>
+        <ul class="list-unstyled post-nav">
+          <li [ngClass]="{active: activeSection == 'posts'}" (click)="activeSection = 'posts'">
+            Posts
+          </li>
+<!--          <li [ngClass]="{active: activeSection == 'reports'}" (click)="activeSection = 'reports'">-->
+<!--            Reports-->
+<!--          </li>-->
+          <li [ngClass]="{active: activeSection == 'write'}" (click)="activeSection = 'write'">
+            Write
+          </li>
+        </ul>
+
+        <div class="posts" [hidden]="activeSection != 'reports'">
+          reports
+        </div>
+        <div class="posts" [hidden]="activeSection != 'posts'">
+          <table>
+            <tr>
+              <th>Title</th>
+              <th>Posted on</th>
+              <th>Categories</th>
+              <th></th>
+            </tr>
+            <tr *ngFor="let ps of allPosts">
+              <td>{{ps.title}}</td>
+              <td>{{ps.date}}</td>
+              <td>{{ps.categoriesFlat}}</td>
+              <td>
+                <a href="{{ps.formattedUrl}}" target="_blank">View</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="posts editor-wrapper" [hidden]="activeSection != 'write'">
+          <div class="clearfix toolbox-css row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 clearfix">
+              <div class="float-left">
+                <select [(ngModel)]='academy'>
+                  <option *ngFor="let el of superList" value='{{el.name}}'>{{el.name}}</option>
+                </select>
+              </div>
+              <div class="float-left">
+                <input type="text" name="tags" autocomplete="off" class="tag" id="tags"
+                       placeholder="Eg. Music, Guitar, Arijit" [(ngModel)]="tags">
+              </div>
+              <div class="float-right">
+                <button class="btn btn-default btn-sm" id="saveQuill" (click)="activeSection = 'posts'">Close</button>
+                <button class="btn btn-primary btn-sm" id="saveQuill" (click)="onSave()">Publish</button>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 3.5rem;">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+
+                <div class="abs-right">
+                  <textarea type="text" name="title" class="form-control title"
+                         id="title"
+                            placeholder="An eye catching title!" autocomplete="off" [(ngModel)]="title"></textarea>
+                  <textarea type="text" name="title" class="form-control subtitle"
+                            placeholder="An equally exciting subtitle..." autocomplete="off" [(ngModel)]="subtitle"></textarea>
+                </div>
+
+                <div id="editor"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

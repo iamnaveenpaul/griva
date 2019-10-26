@@ -1,0 +1,51 @@
+
+<div class="bg-img">
+  <div class="bg-holder">
+
+    <div class="view">
+      <div class="plane main">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1>Find verified tutors near you</h1>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Java, English, French, Guitar..." aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button">
+            Go <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 text-center" *ngFor="let course of courseList">
+      <div class="course-list" [ngStyle]="course.image">
+        <div class="opaque"></div>
+        <div class="top">
+          <h5>{{course.type}}</h5>
+          <ul class="list-unstyled">
+            <li *ngFor="let el of course.list">
+              <a href="/{{el}}">{{el}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="final-section">
+</div>

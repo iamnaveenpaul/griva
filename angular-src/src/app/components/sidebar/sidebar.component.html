@@ -1,0 +1,46 @@
+<div class="col-md-2 d-none d-md-block left-menu">
+  <div class="sidebar-sticky">
+    <ul class="list-unstyled flex-column">
+<!--      <li>-->
+<!--        <div class="icon">-->
+<!--          <i class="fas fa-chart-line"></i>-->
+<!--        </div>-->
+<!--        <div routerLink="/my/dashboard" class="link">-->
+<!--          <a>Dashboard</a>-->
+<!--        </div>-->
+<!--      </li>-->
+      <li>
+        <div class="icon">
+          <i class="fas fa-user-cog"></i>
+        </div>
+        <div routerLink="/my/profile" class="link">
+          <a>Profile</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <i class="fas fa-book-reader"></i>
+        </div>
+        <div routerLink="/my/courses" class="link">
+          <a>Courses</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <i class="fas fa-blog"></i>
+        </div>
+        <div routerLink="/my/posts" class="link">
+          <a>Posts</a>
+        </div>
+      </li>
+      <li>
+        <div class="icon">
+          <i class="fas fa-sign-out-alt"></i>
+        </div>
+        <div (click)="onLogoutClick()" class="link">
+          <a>Logout</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

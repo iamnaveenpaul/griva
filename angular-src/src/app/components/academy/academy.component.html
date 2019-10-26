@@ -1,0 +1,56 @@
+<div class="container academy-post">
+
+  <div class="row">
+    <div class="col-md-7 offset-1">
+
+      <div class="popular-posts" infiniteScroll
+           [infiniteScrollDistance]="2"
+           [infiniteScrollUpDistance]="1.5"
+           [infiniteScrollThrottle]="300"
+           (scrolled)="onScrollDown()"
+           (scrolledUp)="onScrollUp()">
+
+        <a class="row article-wrapper" routerLink="/{{post.url}}" *ngFor="let post of allPosts">
+          <div class="col-md-8 ">
+            <div class="post-info-md">
+              <h2>{{post.title}}</h2>
+              <div class="subtitle">{{post.subtitle}}</div>
+              <div class="abs">
+                <h6 class="author">{{post.author}}</h6>
+                <p class="date">{{post.date}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="image img-md" *ngIf="post.img">
+              <img src="{{post.img}}" alt="{{post.title}}">
+            </div>
+            <div class="image img-md no-image" style="height:100%;" [ngStyle]="{background: post.no_imgcss}" *ngIf="!post.img">
+              <i class="fas fa-{{post.academy}}"></i>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col-md-4 recommendations">
+      <h6>POPULAR in {{academy}}</h6>
+      <a class="row article-wrapper" routerLink="/{{post.url}}" *ngFor="let post of allPosts">
+        <div class="col-md-8 ">
+          <div class="post-info-md">
+            <h2>{{post.title}}</h2>
+            <p class="author">{{post.author}}</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image img-md" *ngIf="post.img">
+            <img src="{{post.img}}" alt="{{post.title}}">
+          </div>
+          <div class="image img-md no-image" style="height:100%;" [ngStyle]="{background: post.no_imgcss}" *ngIf="!post.img">
+            <i class="fas fa-{{post.academy}}"></i>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+<div *ngIf="user" class="container-fluid">
+
+  <div class="wrappper profile">
+    <div class="row">
+      <sidebar></sidebar>
+      <div class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4 right-section">
+        <div class="row">
+          <div class="col-md-2">
+            <img src="assets/img/generic-avatar.png" alt="avatar" height="114px" width="100px">
+          </div>
+          <div class="col-md-6">
+            <table class="table">
+              <tr>
+                <td style="width:25%;">Full name:</td>
+                <td><input type="text" [(ngModel)]="user.username"></td>
+              </tr>
+              <tr>
+                <td style="width:25%;">Profile Handle:</td>
+                <td><input type="text" [(ngModel)]="user.profileHandle"></td>
+              </tr>
+              <tr>
+                <td style="width:25%;">Email Id:</td>
+                <td><input type="text" [(ngModel)]="user.userEmailId"></td>
+              </tr>
+              <tr>
+                <td style="width:25%;">Phone number:</td>
+                <td><input type="text" [(ngModel)]="user.userPhone"></td>
+              </tr>
+            </table>
+            <div class="text-center" style="margin-top:1rem;">
+              <button class="btn btn-primary" (click)="saveProfile()">Save</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="visibility:hidden;">
+          <app-plans></app-plans>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="post-read row">
+    <div class="col-md-2 meta-info">
+      <p>{{views}} views</p>
+      <hr>
+      <ul class="list-unstyled">
+        <li *ngFor="let el of categories">
+          {{el}}
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-8 article">
+      <h1 class="title">{{title}}</h1>
+      <p class="author">{{author}}</p>
+      <p class="date">{{date}}</p>
+      <div>
+        <div #postsls></div>
+      </div>
+    </div>
+    <div class="col-md-2 recommendations">
+      <p>Related articles</p>
+    </div>
+  </div>
+</div>

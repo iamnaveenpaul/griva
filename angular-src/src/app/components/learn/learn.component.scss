@@ -1,0 +1,167 @@
+@import "../../../assets/sass/theme.scss";
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.latest-posts {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.latest-posts .mb-15 {
+  margin-bottom: 15px;
+}
+
+.latest-posts .post-info {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  left: 0;
+  right: 0;
+}
+
+.latest-posts .post-info-md h2:hover {
+  color: inherit;
+}
+
+.latest-posts .post-info-md h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+.latest-posts .mb-15 {
+  cursor: pointer;
+}
+
+.latest-posts .post-info-md .abs h6,
+.latest-posts .post-info-md .abs p {
+  margin: 0;
+  font-weight: 100;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.latest-posts .post-info-md .abs {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.latest-posts .post-info-md {
+  position: absolute;
+  bottom: 0;
+  height: 75px;
+  left: 0;
+  right: 0;
+}
+
+.latest-posts .post-info h2 {
+  overflow: hidden!important;
+  max-height: 48px!important;
+  text-overflow: ellipsis!important;
+  display: -webkit-box!important;
+  -webkit-line-clamp: 2!important;
+  -webkit-box-orient: vertical;
+}
+
+.latest-posts img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1px;
+}
+
+.latest-posts .ht-match {
+  height: 100%;
+  position: relative;
+}
+
+.latest-posts .img-lg {
+  width: 100%;
+  height: 100%;;
+}
+
+.latest-posts .ht-match h2 {
+  padding: 5px 0;
+}
+
+.latest-posts .post-info p {
+  margin: 0;
+}
+
+.latest-posts .post-info .author {
+  font-weight: 100;
+  margin-bottom: 1px;
+}
+
+.latest-posts .post-info .date {
+  font-weight: 100;
+  font-size: 0.8rem;
+  color: $hilite-3;
+}
+
+.latest-posts .image div {
+  background: $hover-red;
+  height: 100%;
+  width: 100%;
+}
+
+.latest-posts .image-inline {
+}
+
+.latest-posts .post-info-inline {
+  border: 1px solid #ccc;
+}
+
+.latest-posts .img-md {
+  overflow: hidden;
+  height: 75px;
+}
+
+.final-section {
+  background: url(assets/img/wave.png) no-repeat center center;
+  min-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 450px;
+  transform: rotate(180deg);
+  background-color: $hover-red;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #bbb;
+  font-weight: 100;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #bbb;
+  font-weight: 100;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #bbb;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 991.99px) {
+  .col-md-4 {
+    text-align: justify;
+    margin-bottom: 40px;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+}
