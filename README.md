@@ -18,10 +18,10 @@
 
 ```bash
 # clone the repo
-git clone https://github.com/petr166/mean-chat-app.git
+git clone https://github.com/iamnaveenpaul/griva-blog.git
 
 # change into the repo directory
-cd mean-chat-app
+cd griva-blog
 
 # !! create .env file with the model from .env.example !!
 
