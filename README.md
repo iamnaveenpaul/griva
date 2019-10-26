@@ -1,26 +1,10 @@
-![Preview](./preview/desktop-preview.png)
 
-# MEAN Chat App
-
-> A small chat application built using the **MEAN** stack
-
-- Feel free to try the live demo at http://petrub.com/chat-app
 
 # Features
 
 - Register and authenticate users using JSON web tokens
 
-- Join a common room where you can chat with all the registered users
-
-- Open 1on1 private conversations with a user of your choice
-
-- Notifications for messages on background conversations
-
 - Have a pleasant UI/UX built to look awesome from mobile to desktop
-
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7bukiR089wb4ayTm/giphy.gif" alt="Desktop Preview"/>
-</p>
 
 # Getting started
 
