@@ -79,14 +79,3 @@ Once authenticated, the server creates a socket bidirectional connection with th
 
 Every time a user sends a message, this goes to the server which redirects it to the desired respondent. Also every time a user enters or leaves chat, the server announces all the connected clients.
 
-# Motivation
-
-This is a personal project with the purpose of better understanding the client-server communication paradigm, new web technologies, especially Angular :)
-
-<p align="center">
-  <img src="https://media.giphy.com/media/3oKIPsMIQbwHIuvGda/giphy.gif" alt="Mobile Preview"/>
-</p>
-
-# [Issues](https://github.com/petr166/mean-chat-app/issues)
-
-If you want to help don't hesitate to come up with ideas, bug reports, make pull requests, all you can do. Also if you have any questions, please use the same issues page
